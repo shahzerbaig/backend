@@ -7,6 +7,7 @@ const port = process.env.PORT || 4000;
 app.use(cors());
 app.get("/", (req: Request, res: Response) => {
   res.send({ message: "Hello from TypeScript and Express server!" });
+  res.end();
 });
 
 app.listen(port, () => {
