@@ -5,7 +5,7 @@ const app = express();
 const port = process.env.PORT || 4000;
 
 app.use(cors());
-app.get("/", (req: Request, res: Response) => {
+app.get("/api", (req: Request, res: Response) => {
   res.send({ message: "Hello from TypeScript and Express server!" });
   res.end();
 });
