@@ -42,7 +42,7 @@ app.get("/api", (req: Request, res: Response) => {
   res.send({ message: "Hello from TypeScript and Express server!" });
   res.end();
 });
-app.get("/admin", async (req: Request, res: Response) => {
+app.get("/api/admin", async (req: Request, res: Response) => {
   console.log("Request arrived");
   let db;
   try {
@@ -66,7 +66,7 @@ app.get("/admin", async (req: Request, res: Response) => {
     }
   }
 });
-app.post("/trade", async (req: Request, res: Response) => {
+app.post("/api/trade", async (req: Request, res: Response) => {
   console.log("Received trade request:");
   const { action, type, stock, price, amount, currency } = req.body;
   const db = await connectToDatabase();
